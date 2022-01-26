@@ -6,23 +6,22 @@ on:
       - main
       - develop
       - "feature/**"
-    pull_request:
-      branches:
-        - main
-        - develop
+  pull_request:
+    branches:
+      - main
+      - develop
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    startegy:
+    strategy:
       matrix:
         node-version: [12.x]
     steps:
-      - uses: action/checkout@v2k
-      - name: Use Node.js ${{matrix.node-version}}
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
-          node-version: ${{matrix.node-version}}
-
+          node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm test
