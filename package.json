@@ -1,0 +1,34 @@
+{
+  "name": "randomito-api",
+  "version": "1.0.0",
+  "description": "Api for shanning ramdom bumbers uniques",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "test": "jest --collectCoverage --silent --testPathPattern=/test --maxWorkers=1 --forceExit --passWithNoTests"
+  },
+  "jest":{
+    "verbose": true,
+    "roots":[
+      "<rootDir>/src/",
+      "<rootDir>/src/test"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Choco1125/randomito-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Choco1125/randomito-api/issues"
+  },
+  "homepage": "https://github.com/Choco1125/randomito-api#readme",
+  "dependencies": {
+    "dotenv": "^14.3.1",
+    "express": "^4.17.2",
+    "jest": "^27.4.7",
+    "morgan": "^1.10.0"
+  }
+}
