@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./src/index.js",
+    "lint": "eslint .",
     "test": "jest --collectCoverage --silent --testPathPattern=/test --maxWorkers=1 --forceExit --passWithNoTests"
   },
-  "jest":{
+  "jest": {
     "verbose": true,
-    "roots":[
+    "roots": [
       "<rootDir>/src/",
       "<rootDir>/src/test"
     ]
@@ -26,7 +27,10 @@
   },
   "homepage": "https://github.com/Choco1125/randomito-api#readme",
   "dependencies": {
+    "babel-eslint": "^10.0.1",
     "dotenv": "^14.3.1",
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.14.0",
     "express": "^4.17.2",
     "jest": "^27.4.7",
     "morgan": "^1.10.0"
