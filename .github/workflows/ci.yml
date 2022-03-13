@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Push to server
-        uses: apleboy/ssh-action@master
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SERVER_IP}}
           username: ${{ secrets.SERVER_USERNAME}}
