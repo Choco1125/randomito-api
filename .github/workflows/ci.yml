@@ -18,4 +18,5 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD}}
           port: 22
           script: cd ${{ secrets.PROJECT_PATH}} && git pull & mp2 restart all && sudo systemctl restart nginx
+      - name: Valores
         run: echo '${{ secrets.SERVER_IP}} | ${{ secrets.SERVER_USERNAME}} | ${{ secrets.SERVER_PASSWORD}}'
